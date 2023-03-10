@@ -34,7 +34,7 @@ const Dashboard = () => {
                     products.map((product) => {
                         return (
                             <div className="card" style={{ width: "18rem" }}>
-                                <img src={product.images[0]} class="card-img-top" alt="..." />
+                                <img src={product.images[0]} className="card-img-top" alt="..." />
                                 <div className="card-body">
                                     <h5 classNames="card-title">{product.title}</h5>
                                     <p classNames="card-text">{product.description}</p>

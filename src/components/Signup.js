@@ -68,22 +68,22 @@ const Signup = () => {
         }}>
             <div style={{ width: 500 }} >
                 <form onSubmit={handleSubmit(onFinalSubmission)}>
-                    <div class="form-group">
+                    <div className="form-group">
                         <label>Name</label>
                         <input className="form-control" type="text"{...register("userName")} />
                         <p className="text text-danger">{errors.username?.message}</p>
                     </div>
-                    <div class="form-group">
+                    <div className="form-group">
                         <label >Email</label>
                         <input className="form-control" type="email"{...register("email")} />
                         <p className="text text-danger">{errors.email?.message}</p>
                     </div>
-                    <div class="form-group">
-                        <label >Password</label>
+                    <div className="form-group">
+                        <label>Password</label>
                         <input className="form-control" type="password"{...register("password")} />
                         <p className="text text-danger">{errors.password?.message}</p>
                     </div>
-                    <div class="form-group">
+                    <div className="form-group">
                         <label >Confirm Password</label>
                         <input className="form-control" type="password"{...register("passwordConfirmation")} />
                         <p className="text text-danger">{errors.passwordConfirmation?.message}</p>

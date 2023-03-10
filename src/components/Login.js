@@ -11,7 +11,7 @@ const schema = yup.object({
 }).required();
 
 const Login = () => {
-    const { register, handleSubmit, watch, formState: { errors } } = useForm({
+    const { register, handleSubmit, formState: { errors } } = useForm({
         resolver: yupResolver(schema)
     });
 
@@ -44,9 +44,7 @@ const Login = () => {
             })
         }
         console.log("final data", data);
-
     }
-
     return (
         <div className="card" style={{
             display: 'flex',
@@ -59,27 +57,21 @@ const Login = () => {
             <div style={{ width: 500, margin: 30, }}>
                 <h1>Login form</h1>
                 <form onSubmit={handleSubmit(onFinalSubmission)}>
-
-
-                    <div class="form-group">
+                    <div className="form-group">
                         <label>Email address</label>
                         <input className="form-control" type="email"{...register("email")} />
                         <p className="text text-danger">{errors.email?.message}</p>
                     </div>
-                    <div class="form-group">
+                    <div className="form-group">
                         <label>Password</label>
                         <input className="form-control" type="password"{...register("password")} />
                         <p className="text text-danger">{errors.password?.message}</p>
                     </div>
-
                     <input type="submit" className="btn btn-primary" style={{ margin: 20 }} />
                 </form>
                 Don't have an account? <a href="/signup">signup</a>
             </div >
-
         </div>
-
-
     )
 }
 export default Login;
